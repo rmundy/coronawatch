@@ -7,7 +7,7 @@ import { Store, Unsubscribe } from '@stencil/redux';
   shadow: true
 })
 export class CoronawatchNav {
-  storeUnsubscribe: Unsubscribe;
+  private storeUnsubscribe: Unsubscribe;
 
   @State()
   name: AppState['page']['name'];

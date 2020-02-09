@@ -1,17 +1,17 @@
-import "@stencil/redux";
-import { Component, h, State, Prop } from "@stencil/core";
-import { Store } from "@stencil/redux";
-import { configureStore } from "../../store";
+import '@stencil/redux';
+import { Component, h, State, Prop } from '@stencil/core';
+import { Store } from '@stencil/redux';
+import { configureStore } from '../../store';
 
 @Component({
-  tag: "app-root",
-  styleUrl: "app-root.css"
+  tag: 'app-root',
+  styleUrl: 'app-root.css'
 })
 export class AppRoot {
   @State()
-  name: AppState["page"]["name"];
+  name: AppState['page']['name'];
 
-  @Prop({ context: "store" })
+  @Prop({ context: 'store' })
   store: Store;
 
   async componentWillLoad() {

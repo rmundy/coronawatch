@@ -21,6 +21,9 @@
       &:hover {
         background-color: rgba(255, 255, 255, 0.1);
       }
+      &--hidden {
+        visibility: hidden;
+      }
       &__img {
         margin-left: 1rem;
       }
@@ -37,6 +40,9 @@
       cursor: pointer;
       &:hover {
         background-color: rgba(255, 255, 255, 0.1);
+      }
+      &--hidden {
+        visibility: hidden;
       }
       &__img {
         margin-left: 1rem;
