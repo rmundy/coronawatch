@@ -10,6 +10,7 @@ import { HTMLStencilElement, JSXBase } from '@stencil/core/internal';
 
 
 export namespace Components {
+  interface AppCoronawatchNav {}
   interface AppCoronawatchTitle {
     'lastUpdated': string;
   }
@@ -22,6 +23,12 @@ export namespace Components {
 
 declare global {
 
+
+  interface HTMLAppCoronawatchNavElement extends Components.AppCoronawatchNav, HTMLStencilElement {}
+  var HTMLAppCoronawatchNavElement: {
+    prototype: HTMLAppCoronawatchNavElement;
+    new (): HTMLAppCoronawatchNavElement;
+  };
 
   interface HTMLAppCoronawatchTitleElement extends Components.AppCoronawatchTitle, HTMLStencilElement {}
   var HTMLAppCoronawatchTitleElement: {
@@ -47,6 +54,7 @@ declare global {
     new (): HTMLAppRootElement;
   };
   interface HTMLElementTagNameMap {
+    'app-coronawatch-nav': HTMLAppCoronawatchNavElement;
     'app-coronawatch-title': HTMLAppCoronawatchTitleElement;
     'app-home': HTMLAppHomeElement;
     'app-profile': HTMLAppProfileElement;
@@ -55,6 +63,7 @@ declare global {
 }
 
 declare namespace LocalJSX {
+  interface AppCoronawatchNav {}
   interface AppCoronawatchTitle {
     'lastUpdated'?: string;
   }
@@ -65,6 +74,7 @@ declare namespace LocalJSX {
   interface AppRoot {}
 
   interface IntrinsicElements {
+    'app-coronawatch-nav': AppCoronawatchNav;
     'app-coronawatch-title': AppCoronawatchTitle;
     'app-home': AppHome;
     'app-profile': AppProfile;
@@ -78,6 +88,7 @@ export { LocalJSX as JSX };
 declare module "@stencil/core" {
   export namespace JSX {
     interface IntrinsicElements {
+      'app-coronawatch-nav': LocalJSX.AppCoronawatchNav & JSXBase.HTMLAttributes<HTMLAppCoronawatchNavElement>;
       'app-coronawatch-title': LocalJSX.AppCoronawatchTitle & JSXBase.HTMLAttributes<HTMLAppCoronawatchTitleElement>;
       'app-home': LocalJSX.AppHome & JSXBase.HTMLAttributes<HTMLAppHomeElement>;
       'app-profile': LocalJSX.AppProfile & JSXBase.HTMLAttributes<HTMLAppProfileElement>;
