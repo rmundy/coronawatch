@@ -1,4 +1,4 @@
-import { SetPageName } from "./page";
+import { SetPageName } from './page';
 
 export interface NullAction {
   type: TypeKeys.NULL;
@@ -9,7 +9,7 @@ export type ActionTypes = NullAction | SetPageName;
 
 export enum TypeKeys {
   // Won't match anything
-  NULL = "NULL",
-  ERROR = "ERROR",
-  SET_PAGE_NAME = "SET_PAGE_NAME"
+  NULL = 'NULL',
+  ERROR = 'ERROR',
+  SET_PAGE_NAME = 'SET_PAGE_NAME'
 }
