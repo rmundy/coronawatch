@@ -9,6 +9,7 @@ export class AppHome {
     return [
       <ion-header>
         <app-coronawatch-title></app-coronawatch-title>
+        <app-coronawatch-nav></app-coronawatch-nav>
       </ion-header>,
 
       <ion-content class="ion-padding"></ion-content>
