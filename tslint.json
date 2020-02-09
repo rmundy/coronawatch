@@ -1,0 +1,10 @@
+{
+  "defaultSeverity": "error",
+  "extends": ["tslint:recommended", "tslint-ionic-rules/strict"],
+  "jsRules": {},
+  "rules": {
+    "quotemark": [true, "single", "jsx-double"],
+    "trailing-comma": [false, { "multiline": "never", "singleline": "never" }]
+  },
+  "rulesDirectory": []
+}
