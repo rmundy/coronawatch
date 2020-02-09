@@ -1,15 +1,46 @@
 :host {
   display: block;
   color: #ffffff;
+  margin-top: 1rem;
   .coronawatch-nav {
     &__wrapper {
       display: flex;
+      justify-content: space-between;
+      font-size: 1.8rem;
     }
     &__default {
-      justify-content: flex-end;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      padding: 1rem;
+      border-radius: 3.2rem;
+      transition: all 0.2s;
+      order: 1;
+      cursor: pointer;
+      &:hover {
+        background-color: rgba(255, 255, 255, 0.1);
+      }
+      &__img {
+        margin-left: 1rem;
+      }
     }
     &__back {
-      justify-content: flex-start;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      padding: 1rem;
+      border-radius: 3.2rem;
+      transition: all 0.2s;
+      order: 0;
+      cursor: pointer;
+      &:hover {
+        background-color: rgba(255, 255, 255, 0.1);
+      }
+      &__img {
+        margin-left: 1rem;
+      }
     }
   }
 }
