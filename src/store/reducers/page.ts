@@ -1,14 +1,16 @@
+import { ActionTypes, TypeKeys } from './../actions/index';
+
 const getInitialState = (): PageState => {
   return {
-    name: "/"
+    name: '/'
   };
 };
 
-const page = (
-  state = getInitialState(),
-  action: any /*for now...*/
-): PageState => {
+const page = (state = getInitialState(), action: ActionTypes): PageState => {
   switch (action.type) {
+    case TypeKeys.SET_PAGE_NAME: {
+      return { ...state, name: action.name };
+    }
   }
   return state;
 };

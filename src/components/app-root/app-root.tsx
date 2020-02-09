@@ -1,6 +1,6 @@
-import '@stencil/redux';
-import { Component, h, State, Prop } from '@stencil/core';
+import { Component, Prop, State, h } from '@stencil/core';
 import { Store } from '@stencil/redux';
+
 import { configureStore } from '../../store';
 
 @Component({
@@ -9,10 +9,10 @@ import { configureStore } from '../../store';
 })
 export class AppRoot {
   @State()
-  name: AppState['page']['name'];
+  name: AppState['page']['name'] = '';
 
   @Prop({ context: 'store' })
-  store: Store;
+  store: Store = {} as Store;
 
   async componentWillLoad() {
     this.store.setStore(configureStore({}));

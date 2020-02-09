@@ -7,13 +7,17 @@ import { Store, Unsubscribe } from '@stencil/redux';
   shadow: true
 })
 export class CoronawatchNav {
-  private storeUnsubscribe: Unsubscribe;
+  private storeUnsubscribe: Unsubscribe = {} as Unsubscribe;
 
   @State()
-  name: AppState['page']['name'];
+  name: AppState['page']['name'] = '';
 
   @Prop({ context: 'store' })
-  store: Store;
+  store: Store = {} as Store;
+
+  connectedCallback() {
+    console.log(`Connected: ${this.name}`);
+  }
 
   componentWillLoad() {
     this.storeUnsubscribe = this.store.mapStateToProps(this, (state: AppState) => {
