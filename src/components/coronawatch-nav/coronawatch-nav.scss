@@ -1,3 +1,15 @@
 :host {
   display: block;
+  color: #ffffff;
+  .coronawatch-nav {
+    &__wrapper {
+      display: flex;
+    }
+    &__default {
+      justify-content: flex-end;
+    }
+    &__back {
+      justify-content: flex-start;
+    }
+  }
 }
