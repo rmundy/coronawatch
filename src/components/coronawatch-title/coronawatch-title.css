@@ -1,0 +1,17 @@
+:host {
+  display: block;
+  color: #ffffff;
+  text-align: center;
+}
+
+.coronawatch-title__text {
+  font-size: 3.2rem;
+  font-weight: 700;
+}
+
+.coronawatch-title__date {
+  text-align: center;
+  opacity: 0.5;
+  font-size: 1.6rem;
+  font-weight: 700;
+}

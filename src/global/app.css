@@ -1,5 +1,8 @@
 /* Document Level Styles */
-
+:root {
+  --main-bg-color: #212024;
+  font-size: 10px;
+}
 /*
   The imports below are needed to include our light dom css for global styles such as fonts and colors.
   You can comment out any of these imports if you do not need that css. For example, if you have your own
