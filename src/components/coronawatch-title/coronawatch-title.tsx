@@ -2,7 +2,7 @@ import { Component, Host, h, Prop } from "@stencil/core";
 
 @Component({
   tag: "app-coronawatch-title",
-  styleUrl: "coronawatch-title.css",
+  styleUrl: "coronawatch-title.scss",
   shadow: true
 })
 export class CoronawatchTitle {
