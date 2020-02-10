@@ -15,10 +15,6 @@ export class CoronawatchNav {
   @Prop({ context: 'store' })
   store: Store = {} as Store;
 
-  connectedCallback() {
-    console.log(`Connected: ${this.name}`);
-  }
-
   componentWillLoad() {
     this.storeUnsubscribe = this.store.mapStateToProps(this, (state: AppState) => {
       const {
@@ -39,14 +35,14 @@ export class CoronawatchNav {
       <Host>
         <slot>
           <div class="coronawatch-nav__wrapper">
-            <div class="coronawatch-nav__default">
+            <div class={'coronawatch-nav__default ' + (this.name !== '/' ? 'coronawatch-nav__default--hidden' : '')}>
               <span>Coronavirus Facts</span>
               <img
                 class="coronawatch-nav__default__img"
                 src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBkPSJNMTIsMEExMiwxMiwwLDEsMCwyNCwxMiwxMiwxMiwwLDAsMCwxMiwwWk0xMC40MzIsMTgsOS4wMTgsMTYuNTksMTMuNTkyLDEyLDkuMDE4LDcuNDIxbDEuNDE0LTEuNDE2TDE2LjQyLDEybC01Ljk4OCw2LjAwNVoiIGZpbGw9IiNmZmYiLz48L3N2Zz4="
               ></img>
             </div>
-            <div class="coronawatch-nav__back">
+            <div class={'coronawatch-nav__back ' + (this.name === '/' ? 'coronawatch-nav__back--hidden' : '')}>
               <span>Back</span>
               <img
                 class="coronawatch-nav__back__img"
