@@ -12,7 +12,9 @@ export class AppHome {
         <app-coronawatch-nav></app-coronawatch-nav>
       </ion-header>,
 
-      <ion-content class="ion-padding"></ion-content>
+      <ion-content class="ion-padding">
+        <app-death-count></app-death-count>
+      </ion-content>
     ];
   }
 }

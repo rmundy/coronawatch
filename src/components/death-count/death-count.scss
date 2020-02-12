@@ -1,0 +1,30 @@
+:host {
+  display: block;
+  background-color: #262529;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 20px;
+}
+
+.death-count {
+  &__wrapper {
+    text-align: center;
+    color: white;
+    padding: 10px;
+    background-color: rgba(253, 29, 29, 0.2);
+    margin: -6px;
+  }
+
+  &__title {
+    font-size: 2.5rem;
+    font-weight: 500;
+    margin: 1rem 0;
+  }
+
+  &__counter {
+    color: #fd1d1d;
+    font-size: 5rem;
+    font-weight: 600;
+    margin: 1rem 0;
+  }
+}

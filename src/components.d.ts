@@ -14,6 +14,7 @@ export namespace Components {
   interface AppCoronawatchTitle {
     'lastUpdated': string;
   }
+  interface AppDeathCount {}
   interface AppHome {}
   interface AppProfile {
     'name': string;
@@ -36,6 +37,12 @@ declare global {
     new (): HTMLAppCoronawatchTitleElement;
   };
 
+  interface HTMLAppDeathCountElement extends Components.AppDeathCount, HTMLStencilElement {}
+  var HTMLAppDeathCountElement: {
+    prototype: HTMLAppDeathCountElement;
+    new (): HTMLAppDeathCountElement;
+  };
+
   interface HTMLAppHomeElement extends Components.AppHome, HTMLStencilElement {}
   var HTMLAppHomeElement: {
     prototype: HTMLAppHomeElement;
@@ -56,6 +63,7 @@ declare global {
   interface HTMLElementTagNameMap {
     'app-coronawatch-nav': HTMLAppCoronawatchNavElement;
     'app-coronawatch-title': HTMLAppCoronawatchTitleElement;
+    'app-death-count': HTMLAppDeathCountElement;
     'app-home': HTMLAppHomeElement;
     'app-profile': HTMLAppProfileElement;
     'app-root': HTMLAppRootElement;
@@ -67,6 +75,7 @@ declare namespace LocalJSX {
   interface AppCoronawatchTitle {
     'lastUpdated'?: string;
   }
+  interface AppDeathCount {}
   interface AppHome {}
   interface AppProfile {
     'name'?: string;
@@ -76,6 +85,7 @@ declare namespace LocalJSX {
   interface IntrinsicElements {
     'app-coronawatch-nav': AppCoronawatchNav;
     'app-coronawatch-title': AppCoronawatchTitle;
+    'app-death-count': AppDeathCount;
     'app-home': AppHome;
     'app-profile': AppProfile;
     'app-root': AppRoot;
@@ -90,6 +100,7 @@ declare module "@stencil/core" {
     interface IntrinsicElements {
       'app-coronawatch-nav': LocalJSX.AppCoronawatchNav & JSXBase.HTMLAttributes<HTMLAppCoronawatchNavElement>;
       'app-coronawatch-title': LocalJSX.AppCoronawatchTitle & JSXBase.HTMLAttributes<HTMLAppCoronawatchTitleElement>;
+      'app-death-count': LocalJSX.AppDeathCount & JSXBase.HTMLAttributes<HTMLAppDeathCountElement>;
       'app-home': LocalJSX.AppHome & JSXBase.HTMLAttributes<HTMLAppHomeElement>;
       'app-profile': LocalJSX.AppProfile & JSXBase.HTMLAttributes<HTMLAppProfileElement>;
       'app-root': LocalJSX.AppRoot & JSXBase.HTMLAttributes<HTMLAppRootElement>;
